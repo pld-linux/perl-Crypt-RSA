@@ -10,7 +10,8 @@ Summary(pl):	Modu³ Perla Crypt::RSA - system kryptograficzny klucza publicznego 
 Name:		perl-Crypt-RSA
 Version:	1.50
 Release:	2
-License:	Artistic or GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	422ee7bbb5b31b146c4fd8c5993af988
