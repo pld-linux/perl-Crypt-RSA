@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	RSA
@@ -13,10 +14,10 @@ License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	422ee7bbb5b31b146c4fd8c5993af988
-BuildRequires:	perl-devel >= 5.6
+%if %{with tests}
 BuildRequires:	perl-Convert-ASCII-Armour
 BuildRequires:	perl-Class-Loader >= 2.00
-%{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
+BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-CBC
 BuildRequires:	perl-Crypt-Primes >= 0.38
 BuildRequires:	perl-Crypt-Random >= 0.33
@@ -27,6 +28,8 @@ BuildRequires:	perl-Digest-SHA1
 BuildRequires:	perl-Math-Pari >= 2.001804
 BuildRequires:	perl-Sort-Versions
 BuildRequires:	perl-Tie-EncryptedHash
+%endif
+BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Class-Loader >= 2.00
 Requires:	perl-Crypt-Primes >= 0.38
@@ -51,7 +54,7 @@ kryptograficznego klucza publicznego RSA.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
