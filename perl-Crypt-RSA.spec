@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Crypt
-%define		pnam	RSA
+%define	pdir	Crypt
+%define	pnam	RSA
 Summary:	Crypt::RSA Perl module - RSA public-key cryptosystem
 Summary(pl):	Modu³ Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
 Name:		perl-Crypt-RSA
