@@ -1,3 +1,6 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	RSA
@@ -5,14 +8,14 @@ Summary:	Crypt::RSA Perl module - RSA public-key cryptosystem
 Summary(pl):	Modu³ Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
 Name:		perl-Crypt-RSA
 Version:	1.48
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Convert-ASCII-Armour
 BuildRequires:	perl-Class-Loader >= 2.00
-BuildRequires:	perl-Crypt-Blowfish
+%{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
 BuildRequires:	perl-Crypt-CBC
 BuildRequires:	perl-Crypt-Primes >= 0.38
 BuildRequires:	perl-Crypt-Random >= 0.33
@@ -45,6 +48,8 @@ kryptograficznego klucza publicznego RSA.
 %build
 perl Makefile.PL
 %{__make}
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
