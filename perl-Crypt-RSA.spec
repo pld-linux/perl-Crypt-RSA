@@ -30,7 +30,7 @@ BuildRequires:	perl-Math-Pari >= 2.001804
 BuildRequires:	perl-Sort-Versions
 BuildRequires:	perl-Tie-EncryptedHash
 %endif
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Class-Loader >= 2.00
 Requires:	perl-Crypt-Primes >= 0.38
