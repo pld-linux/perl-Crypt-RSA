@@ -12,7 +12,7 @@ Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Convert-ASCII-Armour
 BuildRequires:	perl-Class-Loader >= 2.00
 %{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
