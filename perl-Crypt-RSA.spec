@@ -8,13 +8,13 @@
 Summary:	Crypt::RSA Perl module - RSA public-key cryptosystem
 Summary(pl):	Modu³ Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
 Name:		perl-Crypt-RSA
-Version:	1.50
-Release:	3
+Version:	1.55
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	422ee7bbb5b31b146c4fd8c5993af988
+# Source0-md5:	d830a4f2704a4724e14125e547ebd42a
 %if %{with tests}
 BuildRequires:	perl-Convert-ASCII-Armour
 BuildRequires:	perl-Class-Loader >= 2.00
