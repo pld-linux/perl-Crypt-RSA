@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	RSA
 Summary:	Crypt::RSA Perl module - RSA public-key cryptosystem
-Summary(pl):	Modu³ Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
+Summary(pl.UTF-8):   ModuÅ‚ Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
 Name:		perl-Crypt-RSA
 Version:	1.57
 Release:	1
@@ -43,8 +43,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Crypt::RSA is a pure-perl, cleanroom implementation of the RSA
 public-key cryptosystem.
 
-%description -l pl
-Modu³ Crypt::RSA jest czysto perlow± implementacj± systemu
+%description -l pl.UTF-8
+ModuÅ‚ Crypt::RSA jest czysto perlowÄ… implementacjÄ… systemu
 kryptograficznego klucza publicznego RSA.
 
 %prep
