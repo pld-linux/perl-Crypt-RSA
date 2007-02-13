@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	RSA
 Summary:	Crypt::RSA Perl module - RSA public-key cryptosystem
-Summary(pl.UTF-8):   Moduł Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
+Summary(pl.UTF-8):	Moduł Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
 Name:		perl-Crypt-RSA
 Version:	1.57
 Release:	1
