@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	RSA
@@ -22,7 +22,7 @@ BuildRequires:	perl-Class-Loader >= 2.00
 BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-CBC
 BuildRequires:	perl-Crypt-Primes >= 0.38
-BuildRequires:	perl-Crypt-Random >= 0.33
+BuildRequires:	perl-Crypt-Random >= 0.34
 BuildRequires:	perl-Data-Buffer
 BuildRequires:	perl-Digest-MD2
 BuildRequires:	perl-Digest-MD5
@@ -35,7 +35,7 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Class-Loader >= 2.00
 Requires:	perl-Crypt-Primes >= 0.38
-Requires:	perl-Crypt-Random >= 0.33
+Requires:	perl-Crypt-Random >= 0.34
 Requires:	perl-Math-Pari >= 2.001804
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
