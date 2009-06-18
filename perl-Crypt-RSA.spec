@@ -8,35 +8,30 @@
 Summary:	Crypt::RSA Perl module - RSA public-key cryptosystem
 Summary(pl.UTF-8):	Moduł Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
 Name:		perl-Crypt-RSA
-Version:	1.58
+Version:	1.99
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Crypt/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fb0eb5f47f42eb8737e1ecfa28ed4523
+# Source0-md5:	f675a07810d735e99d7894338aba8e87
 URL:		http://search.cpan.org/dist/Crypt-RSA/
-%if %{with tests}
-BuildRequires:	perl-Convert-ASCII-Armour
-BuildRequires:	perl-Class-Loader >= 2.00
-BuildRequires:	perl-Crypt-Blowfish
-BuildRequires:	perl-Crypt-CBC
-BuildRequires:	perl-Crypt-Primes >= 0.38
-BuildRequires:	perl-Crypt-Random >= 0.34
-BuildRequires:	perl-Data-Buffer
-BuildRequires:	perl-Digest-MD2
-BuildRequires:	perl-Digest-MD5
-BuildRequires:	perl-Digest-SHA1
-BuildRequires:	perl-Math-Pari >= 2.001804
-BuildRequires:	perl-Sort-Versions
-BuildRequires:	perl-Tie-EncryptedHash
-%endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl-Class-Loader >= 2.00
-Requires:	perl-Crypt-Primes >= 0.38
-Requires:	perl-Crypt-Random >= 0.34
-Requires:	perl-Math-Pari >= 2.001804
+%if %{with tests}
+BuildRequires:	perl-Class-Loader >= 2.00
+BuildRequires:	perl(Convert::ASCII::Armour)
+BuildRequires:	perl(Crypt::Blowfish)
+BuildRequires:	perl(Crypt::CBC)
+BuildRequires:	perl(Crypt::Primes) >= 0.38
+BuildRequires:	perl(Crypt::Random) >= 0.34
+BuildRequires:	perl(Data::Buffer)
+BuildRequires:	perl(Digest::MD2)
+BuildRequires:	perl(Math::Pari) >= 2.001804
+BuildRequires:	perl(Sort::Versions)
+BuildRequires:	perl(Tie::EncryptedHash)
+BuildRequires:	perl-Digest-SHA1
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -69,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes TODO extradocs/*
-%{perl_vendorlib}/Crypt/RSA.pm
+%doc Changes README TODO
+%{perl_vendorlib}/Crypt/*.pm
 %{perl_vendorlib}/Crypt/RSA
 %{_mandir}/man3/*
