@@ -9,7 +9,7 @@ Summary:	Crypt::RSA Perl module - RSA public-key cryptosystem
 Summary(pl.UTF-8):	Moduł Perla Crypt::RSA - system kryptograficzny klucza publicznego RSA
 Name:		perl-Crypt-RSA
 Version:	1.99
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -20,16 +20,16 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-Loader >= 2.00
-BuildRequires:	perl(Convert::ASCII::Armour)
-BuildRequires:	perl(Crypt::Blowfish)
-BuildRequires:	perl(Crypt::CBC)
-BuildRequires:	perl(Crypt::Primes) >= 0.38
-BuildRequires:	perl(Crypt::Random) >= 0.34
-BuildRequires:	perl(Data::Buffer)
-BuildRequires:	perl(Digest::MD2)
-BuildRequires:	perl(Math::Pari) >= 2.001804
-BuildRequires:	perl(Sort::Versions)
-BuildRequires:	perl(Tie::EncryptedHash)
+BuildRequires:	perl-Convert-ASCII-Armour
+BuildRequires:	perl-Crypt-Blowfish
+BuildRequires:	perl-Crypt-CBC
+BuildRequires:	perl-Crypt-Primes >= 0.38
+BuildRequires:	perl-Crypt-Random >= 0.34
+BuildRequires:	perl-Data-Buffer
+BuildRequires:	perl-Digest-MD2
+BuildRequires:	perl-Math-Pari >= 2.001804
+BuildRequires:	perl-Sort-Versions
+BuildRequires:	perl-Tie-EncryptedHash
 BuildRequires:	perl-Digest-SHA1
 %endif
 BuildArch:	noarch
